@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+
+  marcodb:
+    container_name: meucontainerdb
+    environment: 
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=control_finans
+      - POSTGRES_USER=marco
+    ports: 
+      - "5435:5432"
+    image: postgres:10-alpine
+    volumes: 
+      - db-data:/var/lib/postgresql/data
+
+
+volumes: 
+  db-data:
