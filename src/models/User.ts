@@ -1,5 +1,6 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import FixedExpenses from "./FixedExpenses";
+import VariablesExpenses from "./VariablesExpenses";
 
 
 @Entity('users')
@@ -22,6 +23,9 @@ class User {
       
     @OneToMany(type => FixedExpenses, user => User)
     fixed: FixedExpenses[]
+
+    @OneToMany(type => VariablesExpenses, user => User)
+    variable: VariablesExpenses[]
 
 }
 

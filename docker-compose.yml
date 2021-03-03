@@ -2,7 +2,6 @@ version: "3.7"
 services:
 
   marcodb:
-    container_name: meucontainerdb
     environment: 
       - POSTGRES_PASSWORD=docker
       - POSTGRES_DB=control_finans

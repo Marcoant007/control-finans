@@ -15,9 +15,12 @@ class FixedExpenses {
     value: number
 
     @Column()
+    date: Date
+
+    @Column('int4', {name:"user_id"})
     user_id: number
 
-    @ManyToOne(type => FixedExpenses, users => User, {eager: true} )
+    @ManyToOne(type => User, user => user.fixed, {eager: true} )
     @JoinColumn({name: "user_id"})
     user: User
 }
