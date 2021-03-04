@@ -4,9 +4,9 @@ import FixedExpenses from "../models/FixedExpenses";
 
 @EntityRepository(FixedExpenses)
 class FixedRepository extends Repository<FixedExpenses>{
-    public async findByExpensesFixed(name: string): Promise< FixedExpenses | undefined>{
+    public async findByExpensesFixed(user_id: number): Promise< FixedExpenses | undefined>{
         const findFixedRepository = await this.findOne({
-            where: {name: name}
+            where: {user_id}
         })
         return findFixedRepository;
     }

@@ -5,12 +5,20 @@ import CreateUserService from '../services/Users/CreateUserService';
 import ReadUserService from '../services/Users/ReadUserService';
 import UpdatedUserService from '../services/Users/UpdateUserService';
 import DeleteUserService from '../services/Users/DeleteUserService';
+import FindByIdUserService from '../services/Users/FindByIdUserService';
 
 const userRouter = Router()
 
 userRouter.get('/', async (request, response) => {
     const readUser = new ReadUserService();
     const users = await readUser.execute()
+    return response.status(200).json(users)
+})
+
+userRouter.get('/:id', async(request, response)=> {
+    const {id} = request.params
+    const findById = new FindByIdUserService
+    const users = await findById.execute(+id)
     return response.status(200).json(users)
 })
 

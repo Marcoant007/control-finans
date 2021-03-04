@@ -21,7 +21,7 @@ class User {
     @Column()
     salary: number
       
-    @OneToMany(type => FixedExpenses, user => User)
+    @OneToMany(type => FixedExpenses, fixed => fixed.user, {eager: true, cascade: true})
     fixed: FixedExpenses[]
 
     @OneToMany(type => VariablesExpenses, user => User)

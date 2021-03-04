@@ -20,7 +20,7 @@ class FixedExpenses {
     @Column('int4', {name:"user_id"})
     user_id: number
 
-    @ManyToOne(type => User, user => user.fixed, {eager: true} )
+    @ManyToOne(type => User, user => user.fixed)
     @JoinColumn({name: "user_id"})
     user: User
 }
