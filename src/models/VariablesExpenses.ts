@@ -15,6 +15,9 @@ class VariablesExpenses {
     value: number
 
     @Column()
+    date: Date
+
+    @Column()
     user_id: number
 
     @ManyToOne(type => User, user => user.variable, {eager: true} )
