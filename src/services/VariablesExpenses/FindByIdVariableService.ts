@@ -15,8 +15,6 @@ class FindByVariableService {
 
 }
 
-<<<<<<< HEAD
+
 export default FindByVariableService
-=======
-export default FindByIdExpensesService
->>>>>>> 058fe4aebe5aa5747c2ae903b509e589dc69eee4
+

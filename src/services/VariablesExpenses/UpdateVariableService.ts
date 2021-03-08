@@ -12,11 +12,8 @@ interface Request {
 }
 
 
-<<<<<<< HEAD
 class UpdatedVariableExpensesService {
-=======
-class UpdatedExpensesService {
->>>>>>> 058fe4aebe5aa5747c2ae903b509e589dc69eee4
+
     public async execute({id,value,user_id,name,date}:Request){
 
         const variablesExpenses = getCustomRepository(VariablesRepository)
@@ -32,8 +29,6 @@ class UpdatedExpensesService {
     }
 }
 
-<<<<<<< HEAD
 export default UpdatedVariableExpensesService
-=======
-export default UpdatedExpensesService
->>>>>>> 058fe4aebe5aa5747c2ae903b509e589dc69eee4
+
+

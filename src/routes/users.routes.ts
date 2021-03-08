@@ -12,13 +12,9 @@ const userRouter = Router()
 userRouter.get('/', async (request, response) => {
     const readUser = new ReadUserService();
     const users = await readUser.execute()
-<<<<<<< HEAD
     console.log(users)
     return response.status(200).json(users)
 
-=======
-    return response.status(200).json(users)
->>>>>>> 058fe4aebe5aa5747c2ae903b509e589dc69eee4
 })
 
 userRouter.get('/:id', async(request, response)=> {

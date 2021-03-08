@@ -41,22 +41,14 @@ fixedRouter.post('/', async(request,response) => {
 
 fixedRouter.put('/:id', async(request,response) => {
     const {id} = request.params
-<<<<<<< HEAD
     const{ name, user_id, value,date } = request.body
-=======
-    const{ name, user_id, value } = request.body
->>>>>>> 058fe4aebe5aa5747c2ae903b509e589dc69eee4
     const updatedFixed = new UpdatedFixedExpensesService()
     const fixed = await updatedFixed.execute({
         id: Number(id),
         name: name,
         user_id: user_id,
-<<<<<<< HEAD
         value: value,
         date: date
-=======
-        value: value
->>>>>>> 058fe4aebe5aa5747c2ae903b509e589dc69eee4
     })
     return response.status(200).json(fixed)
 })
