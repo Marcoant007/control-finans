@@ -2,7 +2,7 @@ import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "t
 import User from "./User";
 
 
-@Entity('variables_expenses')
+@Entity('variable_expenses')
 class VariablesExpenses {
 
     @PrimaryGeneratedColumn()
@@ -17,10 +17,10 @@ class VariablesExpenses {
     @Column()
     date: Date
 
-    @Column()
+    @Column('int4', {name:"user_id"})
     user_id: number
 
-    @ManyToOne(type => User, user => user.variable, {eager: true} )
+    @ManyToOne(type => User, user => user.variable)
     @JoinColumn({name: "user_id"})
     user: User
 }

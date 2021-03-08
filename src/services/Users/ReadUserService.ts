@@ -1,11 +1,13 @@
 import { getCustomRepository } from "typeorm";
-import FixedRepository from "../../repositories/FixedExpenses";
-class ListFixedExpensesService {
+import UserRepository from "../../repositories/UsersRepository";
+
+
+class ReadUsersService {
     public async execute() {
-        const userRepository = getCustomRepository(FixedRepository)
+        const userRepository = getCustomRepository(UserRepository)
         const users = await userRepository.find()
         return users
     }
 }
 
-export default ListFixedExpensesService
+export default ReadUsersService

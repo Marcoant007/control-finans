@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
     "type": "postgres",
     "host": "localhost",
@@ -15,22 +14,5 @@
     "cli": {
         "migrationsDir": "./src/database/migrations"
     }
-=======
-{
-    "type": "postgres",
-    "host": "localhost",
-    "port": 5435,
-    "username": "marco",
-    "password": "docker",
-    "database": "control_finans",
-    "entities": [
-        "./src/models/*.ts"
-    ],
-    "migrations": [
-        "./src/database/migrations/*.ts"
-    ],
-    "cli": {
-        "migrationsDir": "./src/database/migrations"
-    }
->>>>>>> 058fe4aebe5aa5747c2ae903b509e589dc69eee4
+
 }

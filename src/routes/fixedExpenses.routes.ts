@@ -3,12 +3,12 @@ import CreateFixedExpensesService from "../services/FixedExpenses/CreateFixedExp
 import DeleteFixedExpenses from "../services/FixedExpenses/DeleteFixedExpensesService";
 import FindByIdExpensesService from "../services/FixedExpenses/FindByIdFixedExpensesService";
 import UpdatedFixedExpensesService from "../services/FixedExpenses/UpdateExpensesService";
-import ListFixedExpensesService from "../services/Users/ReadUserService";
+import ReadUsersService from "../services/Users/ReadUserService";
 
 const fixedRouter = Router();
 
 fixedRouter.get('/', async (request, response) => {
-    const listFixed = new ListFixedExpensesService
+    const listFixed = new ReadUsersService
     const fixedExpenses = await listFixed.execute()
     return response.status(200).json(fixedExpenses)
 })
