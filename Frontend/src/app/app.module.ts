@@ -8,7 +8,8 @@ import { HeaderComponent } from './components/teamplate/header/header.component'
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { NavComponent } from './components/teamplate/nav/nav.component';
-
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list'
 
 
 @NgModule({
@@ -21,7 +22,9 @@ import { NavComponent } from './components/teamplate/nav/nav.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatListModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
