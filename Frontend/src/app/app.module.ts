@@ -9,14 +9,18 @@ import { HeaderComponent } from './components/teamplate/header/header.component'
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { NavComponent } from './components/teamplate/nav/nav.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatListModule} from '@angular/material/list'
+import {MatListModule} from '@angular/material/list';
+import { LoginComponent } from './components/teamplate/login/login.component';
+import { HomeComponent } from './views/home/home.component'
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    NavComponent
+    NavComponent,
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

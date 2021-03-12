@@ -1,34 +1,46 @@
 <mat-sidenav-container class="container">
-    <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" >
+    <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true">
         <span>
             <a routerLink="/">
-                <img class="logo" src="assets/img/logo3.png"  alt="logo">
-            
+                <img class="logo" src="assets/img/logo3.png" alt="logo">
+
             </a>
         </span>
         <mat-nav-list class="nav-list">
             <a mat-list-item routerLink="/">
-                <i class="material-icons" >
+                <i class="material-icons">
                     home
                 </i>
                 Início
             </a>
-            <a mat-list-item  routerLink="/">
-                <i class="material-icons" >
-                    people_alt
+            <a mat-list-item routerLink="/">
+                <i class="material-icons">
+                    person_add
+                </i>
+                Cadastrar Usuários
+             </a>
+            <a mat-list-item routerLink="/">
+                <i class="material-icons">
+                    payments
                 </i>
                 Despesas Fixas
             </a>
             <a mat-list-item routerLink="/">
                 <i class="material-icons">
-                    shield
+                    price_change
                 </i>
                 Despesas Variaveis
             </a>
-         
+            <a mat-list-item routerLink="/login">
+                <i class="material-icons">
+                    people_alt
+                </i>
+                Login
+            </a>
+
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content class="content">
-        <router-outlet></router-outlet>
+        <app-home></app-home>
     </mat-sidenav-content>
 </mat-sidenav-container>
